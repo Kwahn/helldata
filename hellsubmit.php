@@ -112,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   //For everything else, we mostly care that it's a number - it'll be filtered out if they submit junk, but it needs to at least be valid junk
   foreach($arrParams as $index=>$val) {
-    if($index < 3 || $index > 14) {
+    if($index < 3 || $index > 15) { //Everything here's either an int or a bool that we pretend is an int because it's convenient
       continue;
     }
     if(!is_numeric($val) && $val!=="") {
